@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presente Misterioso</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1601084881623-cd36b0a7b8f5') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: red;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      padding: 15px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    .mensagem {
+      display: none;
+      font-size: 1.3em;
+      margin-top: 30px;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Presente Misterioso 🎁</h1>
+    <button onclick="mostrarMensagem()">REVELAR PRESENTE</button>
+    <div class="mensagem" id="mensagem">
+      <p>Você achou que era só um presente qualquer... mas na verdade, o presente sou eu aqui, dizendo o quanto você é especial. 💖</p>
+      <p>Te escolhi não por acaso, mas porque meu coração encontrou no seu um lar. Gosto muito de você! 💌</p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensagem() {
+      document.querySelector("button").style.display = "none";
+      document.getElementById("mensagem").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+add index.html
